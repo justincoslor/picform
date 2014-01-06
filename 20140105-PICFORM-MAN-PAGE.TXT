@@ -1,0 +1,82 @@
+01/05/2014 Justin Coslor -- PICForm Man Page -- rough draft
+
+Typing "?" produces this man page (or type "man picform").
+Typing "h" produces this reference box:
+
+---------------------------------
+Tree                        R
+---------------------------------
+Topics                      T
+Priorities                  Y
+Goals                       G
+Questions                   Q
+Thoughts                    U
+Contexts                    C
+Patterns                    P
+Variables                   V
+Dimensions                  D
+---------------------------------
+
+Typing "R" produces this editable line of code for Tree entries:
+
+---------------------------------
+R::T//Y//G//Q//U//C//P//V//D//
+---------------------------------
+
+Then fill in the blanks in the block above.
+
+Typing "tree" produces this:
+---------------------------------
+R::T.Y.G.Q.U.C.P.V.D.
+---------------------------------
+
+and that can be edited into something like this:
+
+---------------------------------
+R:filename:T:object.Y:object.G:object.Q:object.U:object.C:object.P:object.V:object.D:object.
+---------------------------------
+
+Let's say that if you just wanted to sow some words into T, Y, and C,
+you can splice the filename like this:
+
+---------------------------------
+R:filename:T:object,object,object.Y:object,object,object.C:object,object.
+---------------------------------
+
+- - - - - - - - - - - - - - - - -
+
+Another example. Let's say that if you wanted to see what is in T, G, and Q,
+then just type this:
+
+---------------------------------
+R:filename1:T.G.Q.
+---------------------------------
+
+which produces this:
+
+---------------------------------
+/T/object,object,object/G/object,object/Q/object,object,object,object/
+---------------------------------
+
+but on the screen it looks like this:
+
+------------------------------
+/T/object,object,object
+/G/object,object
+/Q/object,object,object,object
+------------------------------
+
+and that box can be saved to a file by typing
+
+------------------------------
+R:filename1:T.G.Q. > filename2
+------------------------------
+
+- - - - - - - - - - - - - - - - -
+
+Another example. Now this next method can be used to quickly splice
+multiple tree elements together.
+
+------------------------------
+R:filename2:T.G.Q. + R:filename3:T.G.P. + R:filename4:P.V.D. > filename5
+------------------------------
