@@ -27,3 +27,19 @@ Install PICForm Hosting Platform on a Vagrant VM.
   installer which does not require vagrant which installs
   <PROJECTNAME> on a virgin computer)
  )
+
+
+# stuff so far
+
+# add to ~/.bashrc or whatever
+source /var/lib/picform/tree/T/Y/picform.bashrc
+
+# installer
+sudo addgroup picform
+sudo adduser justin picform
+sudo apt-get install libgetopt-declare-perl
+cd /var/lib
+sudo chmod 777 /var/lib
+git clone https://github.com/justincoslor/picform
+sudo chmod 755 /var/lib
+sudo chown -R justin.picform picform/
