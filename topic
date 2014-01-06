@@ -1,0 +1,42 @@
+Topic:Priority:Goal:Context:Pattern:Variable:Dimension
+
+# create repo, going to be for 
+
+Naming conventions:  one-button-computer, oneButtonComputer, one_button_computer, OneButtonComputer, one button computer
+
+PicForm
+one button computer
+TGQ
+prime coordinate map
+seed AI (plant words in a setting to grow like plants in a garden)
+
+code repositories that anyone can use and download but not edit, how do you want them to be inserted into this: Topic:Priority:Goal:Context:Pattern:Variable:Dimension
+
+each project will need a tree (by tree epistemology)
+
+HoHoHoH each hash is a class for object oriented programming
+
+Have a thing that allows you to descend the tree of topics, via TEXT, nice to have a GUI eventually: 
+
+Text: PicForm
+ GUI: PicVis
+
+Little boxes of drawers with little boxes screw picvis system of 25 drawers in the little box, and you click on the box and it has a picture of it
+
+25 drawer case
+
+
+
+# where does the installer go, it is going to be a vagrant script if that's okay which fully installs/uninstalls picform on a computer
+
+Make a man page for PicForm based on the jpg image J sent.
+
+(develop installer)
+(develop tests)
+
+Move the picform image where it is supposed to go.
+
+(Make a xsd or dtd for a picform xml format, try rtf and owl as well)
+
+(Convert java classes to picform epistemology)
+

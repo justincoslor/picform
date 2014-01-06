@@ -1,0 +1,70 @@
+#!/usr/bin/perl -w
+
+use Getopt::Declare;
+
+my $spec = "
+	-?		Man picform
+	-h		Display Help
+";
+
+my $config = Getopt::Declare->new($spec);
+
+if (exists $config->{'-h'}) {
+  help();
+}
+
+my $command;
+if (1) {
+  do {
+    if ($command) {
+      if ($command =~ /^R$/) {
+	printBars(sub {print "R::T//Y//G//Q//U//C//P//V//D//\n"});
+      } elsif ($command =~ /^tree$/) {
+	printBars(sub {print "R::T.Y.G.Q.U.C.P.V.D.\n"});
+      } elsif ($command =~ /^h$/) {
+	help();
+      } elsif ($command =~ /^?$/) {
+	exec 'man picform';
+      } else {
+	print "Unknown command: $command\n";
+      }
+    }
+    print "> ";
+  } while ($command = <STDIN>);
+}
+
+sub help {
+  printBars
+    (sub {
+       my @order = qw(Tree Topics Priorities Goals Questions Thoughts
+		      Contexts Patterns Variables Dimensions);
+
+       my $abbrev =
+	 {
+	  Tree => 'R',
+	  Topics => 'T',
+	  Priorities => 'Y',
+	  Goals => 'G',
+	  Questions => 'Q',
+	  Thoughts => 'U',
+	  Contexts => 'C',
+	  Patterns => 'P',
+	  Variables => 'V',
+	  Dimensions => 'D',
+	 };
+
+       foreach my $element (@order) {
+	 printf("%-27s %s\n", $element,$abbrev->{$element});
+	 if ($element eq 'Tree') {
+	   print "---------------------------------\n";
+	 }
+       }
+     });
+
+}
+
+sub printBars {
+  print "---------------------------------\n";
+  $_[0]->();
+  print "---------------------------------\n";
+}
