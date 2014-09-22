@@ -40,3 +40,16 @@ Move the picform image where it is supposed to go.
 
 (Convert java classes to picform epistemology)
 
+
+
+
+For Sun Jan  5 18:31:52 PST 2014
+do add 'update-picform' script with git pull git push etc.
+finish installer install-picform which creates /var/lib/picform repository etc 
+on vanilla machine
+develop man page that works with the man command.
+Add book.
+Cross reference book with code.
+
+Sun Jan  6 18:32:29 PST 2014
+we want to make Vagrantfile (s) for testing PICForm on multiple unix distros.	
